@@ -1,0 +1,17 @@
+:root{
+    --bg: #35495e;
+    --bgSoft: #347474;
+    --text: #42b883;
+    --textSoft: #ff7e67;
+    --btn: black; 
+}
+
+body{
+    background-color:var(--bg);
+    color: var(--text); 
+}
+
+a{
+    text-decoration: solid;
+    color: inherit;
+}
