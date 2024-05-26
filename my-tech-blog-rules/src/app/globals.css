@@ -2,10 +2,15 @@
     --bg: #35495e;
     --bgSoft: #347474;
     --text: #42b883;
-    --textSoft: #ff7e67;
+    --textSoft: yellow;
     --btn: black; 
 }
 
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
 body{
     background-color:var(--bg);
     color: var(--text); 
@@ -14,4 +19,16 @@ body{
 a{
     text-decoration: solid;
     color: inherit;
+}
+
+.container{
+   
+    width: 1536px; 
+    margin: auto; 
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

@@ -1,37 +1,36 @@
-import Link from "next/link";
+
+"use client"; 
+
+import styles from './links.module.css';
+import NavLink from './navLink/navLink';
 
 const Links = () => {
-    
-    const links = [
+  const links = [
+    {
+      name: 'Home',
+      link: '/'
+    }, 
+    {
+      name: 'About',
+      link: '/about'
+    },
+    {
+      name: 'Contact',
+      link: '/contact'
+    }, 
+    {
+      name: 'Blog',
+      link: '/blog',
+    }, 
+  ]; 
 
-        {
-            name: 'Home',
-            link: '/'
-        }, 
+  return (
+    <div className={styles.links}>
+      {links.map((link) => (
+        <NavLink item={link} key={link.name} />
+      ))}
+    </div>
+  );
+};
 
-        {
-            name: 'About',
-            link: '/about'
-        },
-        {
-            name: 'Contact',
-            link: '/contact'
-        }, 
-        {
-            name: 'Blog',
-            link: '/blog',
-        }, 
-    ]; 
-
-    
-    return (
-        <div>
-            {links.map((link=>(
-               <Link href={link.link} key={link.name}>{link.name}</Link>
-
-            )))}
-                </div>
-    )
-
-} 
-export default Links
+export default Links;
